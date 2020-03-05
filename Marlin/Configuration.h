@@ -1,7 +1,7 @@
 /***** Last modified 12.10.2019 ******/
-#define MY_MOD_VERSION "(^v^)"
+#define MY_MOD_VERSION "(^_-)"
 #define MY_MOD_DATE  __DATE__ " " __TIME__
-#define DEFAULT_WEBSITE_URL "--04--02--20--"
+#define DEFAULT_WEBSITE_URL "--"__DATE__"--"
 /**
  * Marlin 3D Printer Firmware
  * Copyright (C) 2016 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
@@ -621,7 +621,7 @@
  * Override with M92
  *                                      X, Y, Z, E0 [, E1[, E2[, E3[, E4]]]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 157.63, 800, 857.14 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 160, 159.12, 800, 857.14 }
 
 /**
  * Default Max Feed Rate (mm/s)
@@ -788,7 +788,7 @@
  */
 #define X_PROBE_OFFSET_FROM_EXTRUDER 31  // X offset: -left  +right  [of the nozzle]
 #define Y_PROBE_OFFSET_FROM_EXTRUDER -2  // Y offset: -front +behind [the nozzle]
-#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.7   // Z offset: -below +above  [the nozzle]
+#define Z_PROBE_OFFSET_FROM_EXTRUDER -0.65   // Z offset: -below +above  [the nozzle]
 
 // Certain types of probes need to stay away from edges
 #define MIN_PROBE_EDGE 10

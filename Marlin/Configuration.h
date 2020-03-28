@@ -399,9 +399,9 @@
   //#define DEFAULT_Kd 440
 
   //Alumaker
-  #define  DEFAULT_Kp 17.30
-  #define  DEFAULT_Ki 1.19
-  #define  DEFAULT_Kd 63.06
+  #define  DEFAULT_Kp 18.89
+  #define  DEFAULT_Ki 3.60
+  #define  DEFAULT_Kd 24.76
 
 #endif // PIDTEMP
 
@@ -450,9 +450,9 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
 
-  #define DEFAULT_bedKp 136.81
-  #define DEFAULT_bedKi 24.55
-  #define DEFAULT_bedKd 192.58
+  #define DEFAULT_bedKp 106.67
+  #define DEFAULT_bedKi 12.28
+  #define DEFAULT_bedKd 231.62
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED
@@ -1772,7 +1772,7 @@
 // Tiny, but very sharp OLED display
 //
 //#define MKS_12864OLED          // Uses the SH1106 controller (default)
-#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
+//#define MKS_12864OLED_SSD1306  // Uses the SSD1306 controller
 
 //
 // Silvergate GLCD controller
@@ -1783,6 +1783,10 @@
 //=============================================================================
 //============================  Other Controllers  ============================
 //=============================================================================
+
+// MKS  OLED 2.42''  128x64 FULL GRAPHICS CONTROLLER
+// 
+#define MKS_OLED242_128x64_FULL_GRAPHICS_CONTROLLER
 
 //
 // CONTROLLER TYPE: Standalone / Serial

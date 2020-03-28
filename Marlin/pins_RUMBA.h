@@ -161,7 +161,7 @@
 #define BTN_EN2            12
 #define BTN_ENC            43
 
-#if ENABLED(MKS_12864OLED) || ENABLED(MKS_12864OLED_SSD1306)
+#if ENABLED(MKS_12864OLED) || ENABLED(MKS_12864OLED_SSD1306) || ENABLED(MKS_OLED242_128x64_FULL_GRAPHICS_CONTROLLER)
   #define LCD_PINS_DC      38 // Set as output on init
   #define LCD_PINS_RS      41 // Pull low for 1s to init
   // DOGM SPI LCD Support

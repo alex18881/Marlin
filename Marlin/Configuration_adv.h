@@ -583,7 +583,7 @@
 // @section lcd
 
 // Include a page of printer information in the LCD Main Menu
-//#define LCD_INFO_MENU
+#define LCD_INFO_MENU
 
 // Scroll a longer status message into view
 //#define STATUS_MESSAGE_SCROLLING
@@ -1546,23 +1546,21 @@
 //#define CUSTOM_USER_MENUS
 #if ENABLED(CUSTOM_USER_MENUS)
   #define USER_SCRIPT_DONE "M117 User Script Done"
-  #define USER_SCRIPT_AUDIBLE_FEEDBACK
-  //#define USER_SCRIPT_RETURN  // Return to status screen after a script
+  //#define USER_SCRIPT_AUDIBLE_FEEDBACK
+  #define USER_SCRIPT_RETURN  // Return to status screen after a script
 
-  #define USER_DESC_1 "Home & UBL Info"
-  #define USER_GCODE_1 "G28\nG29 W"
+  #define USER_DESC_1 "Load PLA"
+  #define USER_GCODE_1 "M104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND) ";\nM109 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND) ";\nG91;\nG92 E0 ;\nG1 E900 F9000;\nM104 S0;\nG90;"
 
-  #define USER_DESC_2 "Preheat for PLA"
-  #define USER_GCODE_2 "M140 S" STRINGIFY(PREHEAT_1_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND)
+  #define USER_DESC_2 "Unload PLA"
+  #define USER_GCODE_2 "M104 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND) ";\nM109 S" STRINGIFY(PREHEAT_1_TEMP_HOTEND) ";\nG91;\nG92 E0 ;\nG1 E-1000 F9000;\nM104 S0;\nG90;"
 
-  #define USER_DESC_3 "Preheat for ABS"
-  #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
+  #define USER_DESC_3 "Load ABS"
+  #define USER_GCODE_3 "M104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND) ";\nM109 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND) ";\nG91;\nG92 E0 ;\nG1 E900 F9000;\nM104 S0;\nG90;"
 
-  #define USER_DESC_4 "Heat Bed/Home/Level"
-  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+  #define USER_DESC_4 "Unload ABS"
+  #define USER_GCODE_4 "M104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND) ";\nM109 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND) ";\nG91;\nG92 E0 ;\nG1 E900 F9000;\nM104 S0;\nG90;"
 
-  #define USER_DESC_5 "Home & Info"
-  #define USER_GCODE_5 "G28\nM503"
 #endif
 
 /**

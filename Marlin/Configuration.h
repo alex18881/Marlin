@@ -399,9 +399,9 @@
   //#define DEFAULT_Kd 440
 
   //Alumaker
-  #define  DEFAULT_Kp 18.89
-  #define  DEFAULT_Ki 3.60
-  #define  DEFAULT_Kd 24.76
+  #define  DEFAULT_Kp 18.49
+  #define  DEFAULT_Ki 1.98
+  #define  DEFAULT_Kd 43.16
 
 #endif // PIDTEMP
 
@@ -450,9 +450,9 @@
   //#define DEFAULT_bedKi 1.41
   //#define DEFAULT_bedKd 1675.16
 
-  #define DEFAULT_bedKp 106.67
-  #define DEFAULT_bedKi 12.28
-  #define DEFAULT_bedKd 231.62
+  #define DEFAULT_bedKp 50.15
+  #define DEFAULT_bedKi 9.72
+  #define DEFAULT_bedKd 64.69
 
   // FIND YOUR OWN: "M303 E-1 C8 S90" to run autotune on the bed at 90 degreesC for 8 cycles.
 #endif // PIDTEMPBED

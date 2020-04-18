@@ -372,7 +372,7 @@
 #define PID_MAX BANG_MAX // Limits current to nozzle while PID is active (see PID_FUNCTIONAL_RANGE below); 255=full current
 #define PID_K1 0.95      // Smoothing factor within any PID loop
 #if ENABLED(PIDTEMP)
-  //#define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
+  #define PID_AUTOTUNE_MENU // Add PID Autotune to the LCD "Temperature" menu to run M303 and apply the result.
   //#define PID_DEBUG // Sends debug data to the serial port.
   //#define PID_OPENLOOP 1 // Puts PID in open loop. M104/M140 sets the output power from 0 to PID_MAX
   //#define SLOW_PWM_HEATERS // PWM with very low frequency (roughly 0.125Hz=8s) and minimum state time of approximately 1s useful for heaters driven by a relay
@@ -399,9 +399,9 @@
   //#define DEFAULT_Kd 440
 
   //Alumaker
-  #define  DEFAULT_Kp 18.49
-  #define  DEFAULT_Ki 1.98
-  #define  DEFAULT_Kd 43.16
+  #define  DEFAULT_Kp 36.60
+  #define  DEFAULT_Ki 6.68
+  #define  DEFAULT_Kd 50.22
 
 #endif // PIDTEMP
 

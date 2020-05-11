@@ -130,7 +130,16 @@
 
     #define LCD_PINS_ENABLE                 PB6
 
-    #if ENABLED(FYSETC_MINI_12864)
+    #if EITHER(MKS_12864OLED, MKS_12864OLED_SSD1306)
+      #define LCD_PINS_DC                   PC12  // Set as output on init
+      // #define LCD_PINS_RS                41  // Pull low for 1s to init
+      // DOGM SPI LCD Support
+      #define DOGLCD_CS                     PB6
+      #define DOGLCD_MOSI                   PB5
+      #define DOGLCD_SCK                    PB3
+      #define DOGLCD_A0                     LCD_PINS_DC
+
+    #elif ENABLED(FYSETC_MINI_12864)
 
       #define LCD_BACKLIGHT_PIN             -1
       #define LCD_RESET_PIN                 PC13

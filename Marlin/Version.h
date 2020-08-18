@@ -35,7 +35,11 @@
   /**
    * Marlin release version identifier
    */
+<<<<<<< HEAD
   #define SHORT_BUILD_VERSION "1.1.9" MY_MOD_VERSION
+=======
+  #define SHORT_BUILD_VERSION "1.1.9.1"
+>>>>>>> 1314b31d97bba8cd74c6625c47176d4692f57790
 
   /**
    * Verbose version identifier which should contain a reference to the location

@@ -1,5 +1,5 @@
-/***** Last modified 06.03.2020 ******/
-#define MY_MOD_VERSION "(~_-)"
+/***** Last modified 18.08.2020 ******/
+#define MY_MOD_VERSION "(0_0)"
 #define MY_MOD_DATE  __DATE__ " " __TIME__
 #define DEFAULT_WEBSITE_URL "--" __DATE__ "--" MY_MOD_VERSION
 /**

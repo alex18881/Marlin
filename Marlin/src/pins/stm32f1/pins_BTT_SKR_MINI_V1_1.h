@@ -136,14 +136,13 @@
 
   #else
 
-    #define LCD_PINS_RS                     PC12
 
     #define BTN_EN1                         PD2
     #define BTN_EN2                         PB8
 
-    #define LCD_PINS_ENABLE                 PB6
-
     #if ENABLED(FYSETC_MINI_12864)
+      #define LCD_PINS_RS                     PC12
+      #define LCD_PINS_ENABLE                 PB6
 
       #define LCD_BACKLIGHT_PIN             -1
       #define LCD_RESET_PIN                 PC13
@@ -172,8 +171,18 @@
       //  #define NEOPIXEL_PIN    PB7
       //#endif
 
-    #else                                         // !FYSETC_MINI_12864
+    #elif EITHER(MKS_12864OLED, MKS_12864OLED_SSD1306)
+      #define LCD_PINS_DC                     PB7   // Set as output on init
+      #define LCD_PINS_RS                     PC15   // Pull low for 1s to init
+      // DOGM SPI LCD Support
+      #define DOGLCD_CS                       PC12
+      #define DOGLCD_MOSI                     PB6
+      #define DOGLCD_SCK                      PC13
+      #define DOGLCD_A0                       LCD_PINS_DC
 
+    #else                                         // !FYSETC_MINI_12864
+      #define LCD_PINS_RS                     PC12
+      #define LCD_PINS_ENABLE                 PB6
       #define LCD_PINS_D4                   PC13
       #if ENABLED(ULTIPANEL)
         #define LCD_PINS_D5                 PB7

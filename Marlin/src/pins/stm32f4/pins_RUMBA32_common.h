@@ -152,9 +152,19 @@
   #define BTN_EN2                           PB1
   #define BTN_ENC                           PE7
 
-  #define LCD_PINS_RS                       PE10
-  #define LCD_PINS_ENABLE                   PE9
-  #define LCD_PINS_D4                       PE12
+  #if EITHER(MKS_12864OLED, MKS_12864OLED_SSD1306)
+    #define LCD_PINS_DC                     PE13  //38 // Set as output on init
+    #define LCD_PINS_RS                     PE14  //41 // Pull low for 1s to init
+    // DOGM SPI LCD Support
+    #define DOGLCD_CS                       PE10  //19
+    #define DOGLCD_MOSI                     PE9   //42
+    #define DOGLCD_SCK                      PE12  //18
+    #define DOGLCD_A0                       LCD_PINS_DC
+  #else
+    #define LCD_PINS_RS                     PE10
+    #define LCD_PINS_ENABLE                 PE9
+    #define LCD_PINS_D4                     PE12
+  #endif
 
   #if ENABLED(MKS_MINI_12864)
     #define DOGLCD_CS                       PE13

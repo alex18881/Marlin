@@ -160,21 +160,24 @@
     #define DOGLCD_MOSI                     PE9   //42
     #define DOGLCD_SCK                      PE12  //18
     #define DOGLCD_A0                       LCD_PINS_DC
+  
   #else
+
     #define LCD_PINS_RS                     PE10
     #define LCD_PINS_ENABLE                 PE9
     #define LCD_PINS_D4                     PE12
-  #endif
 
-  #if ENABLED(MKS_MINI_12864)
-    #define DOGLCD_CS                       PE13
-    #define DOGLCD_A0                       PE14
-  #endif
+    #if ENABLED(MKS_MINI_12864)
+      #define DOGLCD_CS                       PE13
+      #define DOGLCD_A0                       PE14
+    #endif
 
-  #if ENABLED(ULTIPANEL)
-    #define LCD_PINS_D5                     PE13
-    #define LCD_PINS_D6                     PE14
-    #define LCD_PINS_D7                     PE15
+    #if ENABLED(ULTIPANEL)
+      #define LCD_PINS_D5                     PE13
+      #define LCD_PINS_D6                     PE14
+    #endif
+
+    #define LCD_PINS_D7                     PE15 // 40
   #endif
 
   // Alter timing for graphical display

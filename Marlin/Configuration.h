@@ -132,7 +132,8 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_RUMBA32_V1_0
+  #define MOTHERBOARD BOARD_RUMBA32_MKS
+  //#define MOTHERBOARD BOARD_RUMBA32_V1_0
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
@@ -666,7 +667,7 @@
 #define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_PROBE_ENDSTOP_INVERTING false // Set to true to invert the logic of the probe.
+#define Z_MIN_PROBE_ENDSTOP_INVERTING true // Set to true to invert the logic of the probe.
 
 /**
  * Stepper Drivers
@@ -907,6 +908,8 @@
  */
 #define BLTOUCH
 #define SERVO0_PIN PB8
+//#define BLTOUCH_DELAY 500
+//#define BLTOUCH_FORCE_SW_MODE
 /**
  * Pressure sensor with a BLTouch-like interface
  */
@@ -992,7 +995,7 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { 31, -2, -0.65 }
+#define NOZZLE_TO_PROBE_OFFSET { 31, -2, -0.56 }
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
